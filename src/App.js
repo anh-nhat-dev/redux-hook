@@ -1,15 +1,19 @@
 import React from "react";
 import { Provider } from "react-redux";
 import store from "./redux-setup/store";
-import Number from "./components/Number";
-import Button from "./components/Button";
+import Clock from "./components/Clock";
+import Control from "./components/Control";
+import TimeManager from "./components/TimeManager";
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <Number />
-        <Button />
+      <div>
+        <div className="container">
+          <TimeManager />
+          <Clock />
+        </div>
+        <Control />
       </div>
     </Provider>
   );
